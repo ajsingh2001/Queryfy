@@ -18,7 +18,7 @@ if not api_key:
 llm = OpenAI(api_key=api_key, temperature=0)
 
 # Streamlit UI
-st.set_page_config(page_title="Talk to your CSV or Excel")
+st.set_page_config(page_title="Queryfy")
 st.header("📊 Ask Anything About Your Data")
 
 # File uploader
