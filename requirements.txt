@@ -6,3 +6,5 @@ langchain
 langchain-experimental
 langchain-openai
 python-dotenv
+openpyxl
+tabulate
