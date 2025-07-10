@@ -4,4 +4,5 @@ plotly
 openai
 langchain
 langchain-experimental
+langchain-openai
 python-dotenv
