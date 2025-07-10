@@ -1,26 +1,24 @@
 import streamlit as st
 import pandas as pd
-from dotenv import load_dotenv
 import os
 
 from langchain_openai import OpenAI
 from langchain_experimental.agents import create_pandas_dataframe_agent
 from langchain.agents.agent_types import AgentType
 
-# Load environment variables
-load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
+# Load API key from Streamlit secrets
+api_key = st.secrets["OPENAI_API_KEY"]
 
 # Check if API key is loaded
 if not api_key:
-    st.error("❌ OpenAI API key not found. Make sure it's set in your .env file.")
+    st.error("❌ OpenAI API key not found. Please add it to Streamlit secrets.")
     st.stop()
 
 # Initialize OpenAI LLM
 llm = OpenAI(api_key=api_key, temperature=0)
 
 # Streamlit UI
-st.set_page_config(page_title="Queryfy")
+st.set_page_config(page_title="Talk to your CSV or Excel")
 st.header("📊 Ask Anything About Your Data")
 
 # File uploader
