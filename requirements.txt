@@ -8,3 +8,4 @@ langchain-openai
 python-dotenv
 openpyxl
 tabulate
+matplotlib
